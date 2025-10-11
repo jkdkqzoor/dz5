@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lec6</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <form class="form1">
+        <h2>tryform</h2>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="enter name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="password">
+        <label for="number">Number</label>
+        <input type="number" min="1" max="10" placeholder="number">   
+        <label for="date">Date</label>
+        <input type="date">
+        <label for="checkbox">i agree</label>
+        <input type="checkbox">
+        <input type="radio" name="gender" value="male">man
+        <input type="radio" name="gender" value="female">woman
+        <input type="range">
+        <input type="color">
+        <input type="file">
+
+        <label for="city">Choose city</label>
+        <select name="city" id="city" multiple size="3">
+            <option value="prague">Prague</option>
+            <option value="brno">Brno</option>
+            <option value="ostrava">Ostrava</option>
+        </select>
+
+        <input list="cities" id="city" name="city">
+        <datalist id="cities">
+            <option value="praga">
+            <option value="brno">
+            <option value="ostrava">
+
+        </datalist>
+
+
+        <button>Submit</button>
+
+    </form> -->
+    <!-- <form>
+        <fieldset class="field1">
+            <legend>User info</legend>
+            <label for="name">Name</label>
+            <input class="inputName" type="text" name="name" id="name" placeholder="enter name" required>
+
+            <label for="email">Email</label>
+            <input class="inputEmail" type="email" name="email" id="email" placeholder="example@gmail.com" required>
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="password">
+            <button>Submit</button>
+        </fieldset>
+    </form> -->
+
+    <header class="header">
+        <a class="logo" href="">LOGO</a>
+        <nav>
+            <div>
+            <ul class="navi navigation" id="navi">
+                <li class="navItem"><a href="">About</a></li>
+                <li class="navItem"><a href="">Our Team</a></li>
+                <li class="navItem"><a href="">Products</a></li>
+                <li class="navItem"><a href="">Contacts</a></li>
+            </ul>
+            </div>
+            <div class="hamburger" id="ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <button class="openModal" id="openModal">Apply</button>
+    </main>
+    <div class="modal" id="modal">
+    <div class="modal-flex">
+        <span class="close " id="close">&Cross;</span>
+        <form class="form">
+            <h2>Your wish</h2>
+            <label>Mailme!
+                <input type="email" placeholder="example@gmail.com">
+            </label>
+            <textarea rows="8" placeholder="Put your wish here"></textarea>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+    </div>
+    <script>
+        const modal = document.getElementById('modal');
+        const openModal = document.getElementById('openModal');
+        const close = document.getElementById('close');
+        openModal.onclick = () => modal.style.display = 'flex' ;
+        close.onclick = () => modal.style.display = 'none';
+
+    </script>
+    <script>
+        const hamburger = document.getElementById('ham');
+        const navi = document.getElementById('navi');
+        navi.classList.remove('slideInleft');
+        navi.classList.remove('slideInright');
+        hamburger.onclick = function animations(){
+            if(navi.classList.contains('slideInleft')){
+                navi.classList.remove('slideInleft');
+                navi.classList.add('slideInright');
+                console.log(1);
+            }
+            else{
+                navi.classList.remove('slideInright');
+                navi.classList.add('slideInleft');
+                console.log(2);
+            }
+            }
+
+            
+        
+    </script>
+
+</body>
+</html>
