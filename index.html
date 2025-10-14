@@ -117,7 +117,7 @@
             if(navi.classList.contains('slideInleft')){
                 navi.classList.remove('slideInleft');
                 navi.classList.add('slideInright');
-                setTimeout(()=>{navi.classList.remove('slideInright');console.log(1);},1000);
+                setTimeout(()=>{navi.classList.remove('slideInright');console.log(1);},1500);
                 
             }
             else{
@@ -127,7 +127,8 @@
             }
             
             }
-        hamburger.addEventListener("click", animations);  
+        hamburger.addEventListener("mousedown" , animations);  
+        hamburger.addEventListener("mousedown", animations);  
          
             
         
