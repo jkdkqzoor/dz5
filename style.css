@@ -144,18 +144,17 @@ main{
     height: 3px;
     background-color: black;
 }
+
 @media (max-width:670px){
 .navigation{
     font-size: 15px;
     gap:15px;
 }
 }
-@media (max-width:450px){
+@media (max-width:449px){
 .hamburger{
     display: flex;
-    position: fixed;
-    top:30px;
-    right:15px;
+    position: relative;
 }
 .navi{
     display:none;

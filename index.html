@@ -80,7 +80,7 @@
             <div class="hamburger" id="ham">
                 <span></span>
                 <span></span>
-                <span></span>
+                <span class="mar0"></span>
             </div>
         </nav>
     </header>
@@ -117,15 +117,17 @@
             if(navi.classList.contains('slideInleft')){
                 navi.classList.remove('slideInleft');
                 navi.classList.add('slideInright');
-                console.log(1);
+                setTimeout(()=>{navi.classList.remove('slideInright');console.log(1);},1000);
+                
             }
             else{
                 navi.classList.remove('slideInright');
                 navi.classList.add('slideInleft');
                 console.log(2);
             }
+            
             }
-
+         
             
         
     </script>
