@@ -111,23 +111,39 @@
     <script>
         const hamburger = document.getElementById("ham");
         const navi = document.getElementById("navi");
-        navi.classList.remove("slideInleft");
-        navi.classList.remove("slideInright");
-        function animations(){
-            if(navi.classList.contains("slideInleft")){
-                navi.classList.remove("slideInleft");
-                navi.classList.add("slideInright");
-                setTimeout(()=>{navi.classList.remove("slideInright");console.log(1);},5000);
+        // navi.classList.remove("slideInleft");
+        // navi.classList.remove("slideInright");
+        // function animations(){
+        //     if(navi.classList.contains("slideInleft")){
+        //         navi.classList.remove("slideInleft");
+        //         navi.classList.add("slideInright");
+        //         setTimeout(()=>{navi.classList.remove("slideInright");console.log(1);},5000);
                 
-            }
-            else{
-                navi.classList.remove("slideInright");
-                navi.classList.add("slideInleft");
-                console.log(2);
-            }
+        //     }
+        //     else{
+        //         navi.classList.remove("slideInright");
+        //         navi.classList.add("slideInleft");
+        //         console.log(2);
+        //     }
             
-            }
-        hamburger.addEventListener("click" , animations);    
+        //     }
+        // hamburger.addEventListener("click" , animations);   
+        hamburger.addEventListener("click", () => {
+    if (navi.classList.contains("slideInleft")) {
+        navi.classList.remove("slideInleft");
+        navi.classList.add("slideInright");
+
+        // After animation, hide the element
+        setTimeout(() => {
+            navi.style.display = "none";
+            navi.classList.remove("slideInright");
+        }, 500); // same as animation-duration
+    } else {
+        navi.style.display = "flex"; // show menu
+        navi.classList.add("slideInleft");
+    }
+});
+ 
          
             
         

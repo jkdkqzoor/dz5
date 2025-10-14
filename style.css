@@ -152,6 +152,9 @@ main{
 }
 }
 @media (max-width:449px){
+.body{
+    max-width: 449;
+}
 .hamburger{
     display: flex;
     position: relative;
@@ -174,14 +177,12 @@ main{
     display:flex;
     animation:slideInleft;
     animation-duration: 0.5s;
-    animation-delay: o;
+    animation-delay: 0;
     animation-direction: normal;
 }
 .slideInright{
-    animation:slideInright; 
-    animation-duration: 0.5s;
-    animation-delay: o;
-    animation-direction: normal;
+    display: flex;
+    animation: slideInright 0.5s forwards;
 }
 @keyframes slideInleft{
     from{
@@ -193,12 +194,12 @@ main{
 }
 @keyframes slideInright{
     from{
-        display:flex;
+        opacity: 1;
         transform: translateX(0);
     }
     to{ 
         transform: translateX(+70vw);
-        display:none;
+        opacity: 0;
     }
 }
 
