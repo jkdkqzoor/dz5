@@ -113,7 +113,7 @@
         const navi = document.getElementById('navi');
         navi.classList.remove('slideInleft');
         navi.classList.remove('slideInright');
-        hamburger.onclick = function animations(){
+        function animations(){
             if(navi.classList.contains('slideInleft')){
                 navi.classList.remove('slideInleft');
                 navi.classList.add('slideInright');
@@ -127,6 +127,7 @@
             }
             
             }
+        hamburger.addEventListener("click", animations);  
          
             
         
