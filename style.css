@@ -112,6 +112,7 @@ main{
     display: none;
 }
 .form{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap:20px;
@@ -119,6 +120,18 @@ main{
     flex-wrap:wrap ;
     text-align: center;
 
+}
+
+.svg1{
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    top:79px;
+    left:0;
+}
+.svg2{
+    height: 17px;
+    width: 17px;
 }
 .btn{
     font-size: 22px;
@@ -206,6 +219,11 @@ main{
 
 
 }
+
+/* transform
+transition 
+opacity
+pointer events */
 
 
 
